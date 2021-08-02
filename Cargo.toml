@@ -1,7 +1,12 @@
 [package]
 name = "todolist"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2018"
+license-file = "LICENSE"
+description = "Rust library to manage todo list"
+readme = "README.md"
+documentation = "https://docs.rs/todolist/"
+exclude = ["/.github", "main.rs", ".releaserc.yml"]
 
 [dependencies]
 uuid = { version = "0.8", features = ["serde", "v4"] }

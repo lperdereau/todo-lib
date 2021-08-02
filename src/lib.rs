@@ -1,7 +1,7 @@
 use once_cell::sync::Lazy;
 use std::sync::Mutex;
 
-use todolist::TodoList;
+use self::todolist::TodoList;
 
 static TODOLIST_ARRAY: Lazy<Mutex<Vec<TodoList>>> = Lazy::new(|| Mutex::new(vec![]));
 
@@ -68,13 +68,13 @@ pub mod todolist {
 
         pub fn add_todo(&mut self, todo: &Todo) -> &mut Self {
             self.todos.push(todo.clone());
-            return self;
+            self
         }
 
         pub fn delete_todo(&mut self, todo: &Todo) -> &mut Self {
             let index: usize = self.todos.iter().position(|x| x.id == todo.id).unwrap();
             self.todos.remove(index);
-            return self;
+            self
         }
     }
 }

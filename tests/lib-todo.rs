@@ -19,12 +19,12 @@
     - the todolist doesn't have to be ordered
 */
 
-/* Delete a todo to a list 
+/* Delete a todo to a list
     acceptation criteria:
     - the todo is not present in the todolist anymore but the others are
 */
 
-/* List todos of a list 
-    acceptation criteria: 
+/* List todos of a list
+    acceptation criteria:
     - all todos of this todolist must be present and not the other todos from the other todolists
 */
