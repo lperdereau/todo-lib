@@ -1,13 +1,13 @@
 publish:
 	cargo login ${{ secrets.CARGO_REGISTRY_TOKEN }} && cargo publish
 
-ci: fmt-check test clippy publish-dry-run
+ci: fmt-check coverage clippy publish-dry-run
 
 fmt-check:
 	cargo fmt --all -- --check
 
-test:
-	cargo test --all-features
+coverage:
+	cargo install cargo-tarpaulin && cargo tarpaulin -v --fail-under=95 -- --test-threads=1
 
 clippy:
 	cargo clippy --all-features -- -D warnings
