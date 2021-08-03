@@ -6,7 +6,7 @@ license-file = "LICENSE"
 description = "Rust library to manage todo list"
 readme = "README.md"
 documentation = "https://docs.rs/todolist/"
-exclude = ["/.github", "main.rs", ".releaserc.yml"]
+exclude = ["/.github", ".releaserc.yml"]
 
 [dependencies]
 uuid = { version = "0.8", features = ["serde", "v4"] }
